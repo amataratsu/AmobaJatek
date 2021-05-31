@@ -1,26 +1,62 @@
 <!DOCTYPE html>
-<html lang="hun">
+
+<html lang="hu">
 <head>
     <meta charset="UTF-8">
     <title>Lakatos Balázs</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
-    <link href="stlus.css" rel="stylesheet" type="text/css"/>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </head>
 <body>
-  <div class="valaszto">
+  <!-- select box -->
+  <div class="kivalaszto">
     <header>Amőba</header>
     <div class="content">
-      <div class="title">Melyikkel szeretnél lenni?</div>
-      <div class="options">
-        <button class="playerX">Játékos (X)</button>
-        <button class="playerO">Játékos (O)</button>
-      </div>
+      <div class="cim">Melyik szimbólummal akarsz lenni?</div>
+      <div class="lehetosegek">
+        <button class="Xjatekos">X Játékos</button>
+        <button class="Ojatekos">O Játékos</button>
+      </div>    
+    </div>
+	
   </div> 
- 
-  
- 
-  <<script src="script.js"></script>
- 
+
+  <!-- playboard section -->
+  <div class="jatektabla">
+    
+    <div class="jatekter">
+	<div class="reszletek">
+      <div class="jatekosok">
+        <span class="kovetkezikO">X jön</span>
+        <span class="kovetkezikX">O jön</span>
+        <div class="slider"></div>
+      </div>
+    </div>
+      <section>
+        <span class="box1"></span>
+        <span class="box2"></span>
+        <span class="box3"></span>
+      </section>
+      <section>
+        <span class="box4"></span>
+        <span class="box5"></span>
+        <span class="box6"></span>
+      </section>
+      <section>
+        <span class="box7"></span>
+        <span class="box8"></span>
+        <span class="box9"></span>
+      </section>
+    </div>
+  </div>
+
+  <!-- result box -->
+  <div class="eredmeny">
+    <div class="kinyert"></div>
+    <div class="ujra"><button>Új kör</button></div>
+  </div>
+
+  <script src="script.js"></script>
+
 </body>
 </html>

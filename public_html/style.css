@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+::selection{
+  color: #fff;
+  background:#56baed;
+}
+body{
+  background:#56baed;
+}
+.kivalaszto, .jatektabla, .jatekter{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.3s ease;
+}
+.kivalaszto{
+  background: #fff;
+  padding: 20px 25px 25px;
+  border-radius: 5px;
+  max-width: 400px;
+  width: 100%;
+}
+.kivalaszto.hide{
+  opacity: 0;
+  pointer-events: none;
+}
+.kivalaszto header{
+  font-size: 30px;
+  font-weight: 600;
+  padding-bottom: 10px;
+  border-bottom: 1px solid lightgrey;
+}
+.kivalaszto .cim{
+  font-size: 22px;
+  font-weight: 500;
+  margin: 20px 0;
+}
+.kivalaszto .lehetosegek{
+  display: flex;
+  width: 100%;
+}
+.lehetosegek button{
+  width: 100%;
+  font-size: 20px;
+  font-weight: 500;
+  padding: 10px 0;
+  border: none;
+  background: #56baed;
+  border-radius: 5px;
+  color: #fff;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.lehetosegek button:hover,
+.ujra button:hover{
+  transform: scale(0.96);
+}
+.lehetosegek button.Xjatekos{
+  margin-right: 5px;
+}
+.lehetosegek button.Ojatekos{
+  margin-left: 5px;
+}
+
+.jatektabla{
+  opacity: 0;
+  pointer-events: none;
+  transform: translate(-50%, -50%) scale(0.9);
+}
+.jatektabla.show{
+  opacity: 1;
+  pointer-events: auto;
+  transform: translate(-50%, -50%) scale(1);
+}
+.jatektabla .reszletek{
+  padding: 7px;
+  border-radius: 5px;
+  background: #fff;
+}
+.jatektabla .jatekosok{
+  width: 100%;
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+}
+.jatekosok span{
+  position: relative;
+  z-index: 2;
+  color: #56baed;
+  font-size: 20px;
+  font-weight: 500;
+  padding: 10px 0;
+  width: 100%;
+  text-align: center;
+  cursor: default;
+  user-select: none;
+  transition: all 0.3 ease;
+}
+.jatekosok.active span:first-child{
+  color: #fff;
+}
+.jatekosok.active span:last-child{
+  color: #56baed;
+}
+.jatekosok span:first-child{
+  color: #fff;
+}
+.jatekosok .slider{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: #56baed;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+.jatekosok.active .slider{
+  left: 50%;
+}
+.jatekosok.active span:first-child{
+  color: #56baed;
+}
+.jatekosok.active span:nth-child(2){
+  color: #fff;
+}
+.jatekosok.active .slider{
+  left: 50%;
+}
+.jatekter{
+  margin-top: 20px;
+}
+.jatekter section{
+  display: flex;
+  margin-bottom: 1px;
+}
+.jatekter section span{
+  display: block;
+  height: 90px;
+  width: 90px;
+  margin: 2px;
+  color: #56baed;
+  font-size: 40px;
+  line-height: 80px;
+  text-align: center;
+  border-radius: 5px;
+  background: #fff;
+}
+
+.eredmeny{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  padding: 25px 20px;
+  border-radius: 5px;
+  max-width: 400px;
+  width: 100%;
+  opacity: 0;
+  text-align: center;
+  background: #fff;
+  pointer-events: none;
+  transform: translate(-50%, -50%) scale(0.9);
+}
+.eredmeny.show{
+  opacity: 1;
+  pointer-events: auto;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.eredmeny .kinyert{
+  font-size: 30px;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+}
+.eredmeny .kinyert p{
+  font-weight: 600;
+  margin: 0 5px;
+}
+.eredmeny .ujra{
+  width: 100%;
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+}
+.ujra button{
+  font-size: 18px;
+  font-weight: 500;
+  padding: 8px 20px;
+  border: none;
+  background: #56baed;
+  border-radius: 5px;
+  color: #fff;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
